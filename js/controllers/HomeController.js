@@ -41,7 +41,7 @@ app.controller('HomeController', ['$scope', function($scope) {
       released:	new Date('1972', '03', '24'),
       country:	'USA',
       posters:	['img/godfather.jpg','img/godfather_2.jpg','img/godfather_3.jpg'],
-      imdb:		'[http://www.imdb.com/title/tt0068646',
+      imdb:		'http://www.imdb.com/title/tt0068646',
       website:	'https://www.facebook.com/thegodfather',
       likes:	928,
       dislikes:	109,
@@ -109,8 +109,24 @@ app.controller('HomeController', ['$scope', function($scope) {
 	
 	/* ADD FUNCTIONS FOR STEP 7 HERE */
 		
-	
-	
+	$scope.likes        = function(index){
+     index.likes++;
+ }
+	$scope.dislikes     = function(index){
+     index.dislikes++;
+ }
+   /* same way to iterate thru  like thelast assignment with the buttons*/
+  $scope.posterClick  = function(index){
+     if(index.posterindex == index.posters.length-1){
+			    index.posterindex = 0;
+	       	}
+	      	else {
+			    index.posterindex++;
+		      }
+   	}
+  }
+  $scope.timeText    = function(index){
+  }
 	
 	
 	
