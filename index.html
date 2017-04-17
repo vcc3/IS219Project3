@@ -36,8 +36,8 @@
         <div class="col-md-6" ng-repeat="film in movies"> 
            <div class="thumbnail" >
            
-					          <img class="poster" src ="{{film.posters[0]}}" ng-click="posterClick(film)"/>
-				          	<div class="imageInfo">{{film[0].posterindex}}</div>
+					          <img class="poster" ng-src ="{{film.posters[film.posterindex]}}" ng-click="posterClick($index)"/>
+				          	<div class="imageInfo">{{film.posterindex}}</div>
                     					
 				          	<p class="title">{{film.title}} ({{film.country}})</p> 
 				          	<p class="score"><i class="fa fa-star" aria-hidden="true"></i> {{film.iscore}} </p>
@@ -45,10 +45,11 @@
 					          <p class="released">Released: {{film.released}} | Rated: {{film.rating}}</p>
 					          <p class="websites">Websites: <a href ="{{film.imdb}}">IMDB</a> <a href ="{{film.website}}"> |Offical</a></p>					
 		                <div class="social">
-		                <p class="likes" ng-click ="likes(film)"><i class="fa fa-thumbs-up" aria-hidden="true"></i> {{film.like}}</p>
-		                <p class="dislikes" ng-click ="dislikes(film)"><i class="fa fa-thumbs-down" aria-hidden="true"></i> {{film.dislike}}</p>
+		                <p class="likes" ng-click ="likes(film)"><i class="fa fa-thumbs-up" ></i> {{film.like}}</p>
+		                <p class="dislikes" ng-click ="dislikes(film)"><i class="fa fa-thumbs-down" ></i> {{film.dislike}}</p>
            </div>
         </div> 
+        
       </div>
     </div>
     
@@ -57,7 +58,7 @@
       <div class="container">
 		
         <a id="github" class="btn btn-lg btn-warning">
-			  <i class="fa fa-lg fa-github pull-left" aria-hidden="true"></i> {{owner}} {{github}}
+			  <i class="fa fa-lg fa-github pull-left" aria-hidden="true"></i> {{owner}}  <a href ="{{github}}"> GitHub:
   		  </a>
       </div>
     </div>
