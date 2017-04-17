@@ -117,12 +117,15 @@ app.controller('HomeController', ['$scope', function($scope) {
  }
    /* same way to iterate thru  like the last assignment with the buttons*/
   $scope.posterClick  = function(index){
-     if(index.posterindex == index.posters.length-1){
+     /*if($scope.movies[index].posterindex == $scope.movies[index].posters.length-1){
 			    index.posterindex = 0;
 	       	}
 	      	else {
 			    index.posterindex++;
 		      }
+                */
+               $scope.movies[index].posterindex++;
+              
    	}
   
   $scope.timeText    = function(min){
