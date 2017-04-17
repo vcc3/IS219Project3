@@ -115,7 +115,7 @@ app.controller('HomeController', ['$scope', function($scope) {
 	$scope.dislikes     = function(index){
      index.dislikes++;
  }
-   /* same way to iterate thru  like thelast assignment with the buttons*/
+   /* same way to iterate thru  like the last assignment with the buttons*/
   $scope.posterClick  = function(index){
      if(index.posterindex == index.posters.length-1){
 			    index.posterindex = 0;
@@ -124,9 +124,11 @@ app.controller('HomeController', ['$scope', function($scope) {
 			    index.posterindex++;
 		      }
    	}
-  }
-  $scope.timeText    = function(index){
-  }
+  
+  $scope.timeText    = function(min){
+  return Math.floor(min / 60) + " Hrs: " + (min%60) + " min.";
+	}
+
 	
 	
 	
