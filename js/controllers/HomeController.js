@@ -88,6 +88,48 @@ app.controller('HomeController', ['$scope', function($scope) {
       likes:	812,
       dislikes:	101,
       posterindex: 0
+	},
+   { 
+      title:	'The Lord of the Rings: The Fellowship of the Ring', 
+      iscore:	8.8,
+      rating:	'PG-13',
+      runtime:	175,
+      released:	new Date('2001', '12', '19'),
+      country:	'USA',
+      posters:	['img/lotr1.jpg','img/lotr2.jpg'],
+      imdb:		'http://www.imdb.com/title/tt0120737/?ref_=nv_sr_1',
+      website:	'http://www.lordoftherings.net/',
+      likes:	9999,
+      dislikes:	1,
+      posterindex: 0
+	},
+   { 
+      title:	'Jurassic Park', 
+      iscore:	8.1,
+      rating:	'PG-13',
+      runtime:	195,
+      released:	new Date('1993', '06', '11'),
+      country:	'USA',
+      posters:	['img/jp1.jpg','img/jp2.jpg'],
+      imdb:		'http://www.imdb.com/title/tt0107290/?ref_=nv_sr_2',
+      website:	'http://www.jurassicworld.com/home',
+      likes:	1000000,
+      dislikes:	101,
+      posterindex: 0
+	},
+   { 
+      title:	'Star Wars: The Force Awakens', 
+      iscore:	8.1,
+      rating:	'PG-13',
+      runtime:	136,
+      released:	new Date('2015', '12', '18'),
+      country:	'USA',
+      posters:	['img/sw1.jpg','img/sw2.jpg'],
+      imdb:		'http://www.imdb.com/title/tt2488496/?ref_=tt_mv',
+      website:	'http://www.starwars.com/the-force-awakens',
+      likes:	9000000,
+      dislikes:	101,
+      posterindex: 0
 	}
 	
 	
@@ -117,14 +159,12 @@ app.controller('HomeController', ['$scope', function($scope) {
  }
    /* same way to iterate thru  like the last assignment with the buttons*/
   $scope.posterClick  = function(index){
-     /*if($scope.movies[index].posterindex == $scope.movies[index].posters.length-1){
-			    index.posterindex = 0;
+    if($scope.movies[index].posterindex == $scope.movies[index].posters.length-1){
+			    $scope.movies[index].posterindex = 0;
 	       	}
 	      	else {
-			    index.posterindex++;
+			    $scope.movies[index].posterindex++;
 		      }
-                */
-               $scope.movies[index].posterindex++;
               
    	}
   
